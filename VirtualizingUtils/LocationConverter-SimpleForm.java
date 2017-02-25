@@ -9,7 +9,7 @@ public static String getStringFromLocation(Location location) {
 		return location.getWorld().getName()+"; "+location.getX()+"; "+location.getY()+"; "+location.getZ()+"; "+location.getYaw()+"; "+location.getPitch();
 	}
 	
-public Location getLocationFromString(String locationstring) {
+public static Location getLocationFromString(String locationstring) {
 		String[] array = locationstring.split("; ");
 		Location loc = new Location(Bukkit.getWorld(array[0]), Double.valueOf(array[1]), Double.valueOf(array[2]), Double.valueOf(array[3]));
 		loc.setYaw(Float.valueOf(array[4]));
